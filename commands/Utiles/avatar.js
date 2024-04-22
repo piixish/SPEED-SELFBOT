@@ -1,9 +1,9 @@
 // command to get profile picture
-const Discord = require("discord.js-selfbot-v13");
+const Discord = require("selfbot.js-v14");
 const {  language } = require("../../fonctions")
 
 module.exports = {
-  name: "avatar",
+  name: "pic",
   description: "Get a user's avatar",
   run: async (client, message, args) => {
     try{
@@ -13,13 +13,13 @@ module.exports = {
       if (args[0]) user = message.mentions.users.first() || await client.users.fetch(args[0]) 
 
       if (!user) {
-        message.edit(`⛧ **Speed** ⛧\n> **Avatar de : <@${user.id}>\n> Pfp :** ` +
+        message.edit(`ღ **samira** ღ\n> **Avatar de : <@${user.id}>\n> Pfp :** ` +
           client.user.displayAvatarURL({ dynamic: true, size: 4096 })
         )
         return
     }
        
-        message.edit(`⛧ **Speed** ⛧\n> **Avatar de : <@${user.id}>\n> Pfp :** ` + 
+        message.edit(`ღ **samira** ღ\n> **Avatar de : <@${user.id}>\n> Pfp :** ` + 
           user.displayAvatarURL({ dynamic: true, size: 4096 })
         )
     }

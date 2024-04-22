@@ -3,7 +3,7 @@ module.exports = {
     description: "Clear un nombre de messages",
     run: async (client, message, args) => {
         try{
-			await message.edit("> **SPEED**")
+			await message.edit("> **samira**")
             await message.delete().catch(()=> false)
 
             const nombre = parseInt(args[0]) || 9999999

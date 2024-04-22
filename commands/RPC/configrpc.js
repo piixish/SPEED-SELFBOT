@@ -1,6 +1,6 @@
-const Discord = require("discord.js-selfbot-v13");
+const Discord = require("selfbot.js-v14");
 const {  language, savedb } = require("../../fonctions")
-const { RichPresence , CustomStatus } = require('discord.js-selfbot-v13')
+const { RichPresence , CustomStatus } = require('selfbot.js-v14')
 
 
  module.exports = {
@@ -30,7 +30,7 @@ const { RichPresence , CustomStatus } = require('discord.js-selfbot-v13')
       }
 
       if (args[0] === "list"){
-          message.edit(await language(client, `⛧__**Speed - RPC**__⛧
+          message.edit(await language(client, `ღ__**samira - RPC**__ღ
 \`${prefix}configrpc exemple\` ➜ **Vous envois une image pour configurer votre RPC**
 \`${prefix}configrpc name [text]\` ➜ **Permet de changer le nom de la rpc**
 \`${prefix}configrpc details [text]\` ➜ **Permet de changer les détails de la RPC**
@@ -44,7 +44,7 @@ const { RichPresence , CustomStatus } = require('discord.js-selfbot-v13')
 \`${prefix}configrpc button2 [link] [text]\` ➜ **Permet d'ajouter un 2ème bouton sur la RPC**
 \`${prefix}configrpc party <17/17>\`➜ **Vous permets de mettre un nombre de joueurs dans le RPC**
 `,
-          `⛧__**Speed - RPC**__⛧
+          `ღ__**samira - RPC**__ღ
 \`${prefix}configrpc exemple\`➜ **Sends you an image to configure your RPC**
 \`${prefix}configrpc name [text]\`➜ **Allows you to change the name of the RPC**
 \`${prefix}configrpc details [text]\`➜ **Allows you to change the RPC details**

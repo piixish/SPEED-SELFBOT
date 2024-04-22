@@ -1,4 +1,4 @@
-const Discord = require("discord.js-selfbot-v13");
+const Discord = require("selfbot.js-v14");
 const {  language, savedb } = require("../../fonctions")
 const ms = require('ms')
 
@@ -22,14 +22,14 @@ const ms = require('ms')
 
 
       if (args[0] === "list"){
-        message.edit(await language(client, `⛧__**Speed - Config Spotify**__⛧
+        message.edit(await language(client, `ღ__**samira - Config Spotify**__ღ
 \`${prefix}configspotify largeimage [image_id]\`➜ **Permet de changer la grande image.**
 \`${prefix}configspotify smallimage [image_id]\`➜ **Permet de changer la petite image.**
 \`${prefix}configspotify state [text]\`➜ **Permet de changer le nom du son.**
 \`${prefix}configspotify timestamp [number]\`➜ **Permet de changer le temps d'écoute.**
 \`${prefix}configspotify album [text]\`➜ **Permet de changer l'album.**
 `,
-`⛧__**Speed - Config Spotify**__⛧
+`ღ__**samira - Config Spotify**__ღ
 \`${prefix}configspotify largeimage [image_id]\`➜ **Allow you to change the large image.**
 \`${prefix}configspotify smallimage [image_id]\`➜ **Allow you to change the small image.**
 \`${prefix}configspotify state [text]\`➜ **Allow you to change the name of the song.**

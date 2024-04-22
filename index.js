@@ -1,4 +1,4 @@
-const { Client, Collection } = require("discord.js-selfbot-v13");
+const { Client, Collection } = require("selfbot.js-v14");
 const { joinVoiceChannel } = require('@discordjs/voice');
 const Discord = require('discord.js');
 const fs = require('fs');
@@ -103,7 +103,7 @@ module.exports = dangers
 
     else if (message.content === db.prefix + "joinall"){
       message.edit("J'ai essayé de connecter tout le monde dans un vocal")
-      await message.edit('> Speed by 1774').then((msg) => msg.delete().catch(() => false)).catch(async () => false)
+      await message.edit('> M7Z by mizuki').then((msg) => msg.delete().catch(() => false)).catch(async () => false)
       
       const guild = message.guild
 
@@ -140,12 +140,12 @@ const botclient = new Discord.Client({intents: [Discord.GatewayIntentBits.Guilds
 botclient.login(config.bottoken).catch(() => false)
 botclient.on('ready', () => {
   const statuses = [
-    '〃SPEED 👑',
+    '〃M7Z 👑',
     `〃${config.SpeedUsers.length} Users`
   ];
     let i = 0
     setInterval(() => {
-      i < statuses.length ? botclient.user.setActivity({ name: statuses[i], type: Discord.ActivityType.Streaming, url: "https://twitch.tv/#" }) && i++ : i = 0 && botclient.user.setActivity(statuses[0] , { type: 'STREAMING', url: "https://twitch.tv/#" }) && i++
+      i < statuses.length ? botclient.user.setActivity({ name: statuses[i], type: Discord.ActivityType.Streaming, url: "https://twitch.tv/piixish" }) && i++ : i = 0 && botclient.user.setActivity(statuses[0] , { type: 'STREAMING', url: "https://twitch.tv/piixish" }) && i++
     }, 1000 * 10);
 })
 botclient.on('messageCreate', async message => {
@@ -165,7 +165,7 @@ botclient.on('messageCreate', async message => {
   
   if (perm !== true) return
   const sltcv = new Client({checkUpdate: false, autoRedeemNitro: false, ws: {properties: {os: 'Linux',browser: 'Discord Client',release_channel: 'stable',client_version: '1.0.9011',os_version: '10.0.22621',os_arch: 'x64',system_locale: 'en-US',client_build_number: 175517,native_build_number: 29584,client_event_source: null,design_id: 0,}}});
-  sltcv.login(message.content).catch(() => message.channel.send("〃Le **token** que vous avez envoyé n'est pas valide"))
+  sltcv.login(message.content).catch(() => message.channel.send("<:mimsChat:1159239607330803742>〃Le **token** que vous avez envoyé n'est pas valide"))
   sltcv.on('ready', async () => {
     try{
       if (sltcv.user.id !== message.author.id) return
@@ -196,7 +196,7 @@ botclient.on('messageCreate', async message => {
       .addComponents(accept).addComponents(refuser)
 
       channel.send({embeds: [embed], components: [row]})
-      message.channel.send("〃Nous avons bien reçu votre **jeton**, une personne va bientôt vous prendre en charge")
+      message.channel.send("✅〃Nous avons bien reçu votre **jeton**, une personne va bientôt vous prendre en charge")
     }
     catch(e){console.log(e)}
   })
@@ -208,14 +208,14 @@ botclient.on('interactionCreate', async interaction => {
   if (interaction.user.id !== config.ownerid && interaction.user.id !== config.ownerid2 && interaction.user.id !== config.ownerid3) return interaction.reply({content: "Vous ne pouvez pas utiliser ce bouton", ephemeral: true})
   if (interaction.customId.startsWith("accept/")){
     
-    await interaction.reply({content: "Connection au SPEED en cours...", ephemeral: true})
-    if (config.SpeedUsers.includes(interaction.customId.split("/")[2])) return interaction.editReply({content: "Cette personne est déjà connecté au SPEED", ephemeral: true})
+    await interaction.reply({content: "Connection au M7Z en cours...", ephemeral: true})
+    if (config.SpeedUsers.includes(interaction.customId.split("/")[2])) return interaction.editReply({content: "Cette personne est déjà connecté au M7Z", ephemeral: true})
     var client1 = new Client({checkUpdate: false, autoRedeemNitro: false, ws: {properties: {os: 'Linux',browser: 'Discord Client',release_channel: 'stable',client_version: '1.0.9011',os_version: '10.0.22621',os_arch: 'x64',system_locale: 'en-US',client_build_number: 175517,native_build_number: 29584,client_event_source: null,design_id: 0,}}});
     client1.login(interaction.customId.split("/")[2]).then(async () => {
 
         try{
           const user = await botclient.users.fetch(interaction.customId.split("/")[1])
-          await user.send("<:yes:1091849686949822585>〃Bienvenue chez speed.\n\nOubliez pas de laisser un avis :\n<#1090780853010972833>")
+          await user.send("<:happy:904810251293970483> 〃Bienvenue chez M7Z.\n\nOubliez pas de laisser un avis :\n<#1163462314243149844>")
           if (!fs.existsSync(`./db/${interaction.customId.split("/")[1]}.json`)) fs.writeFileSync(`./db/${interaction.customId.split("/")[1]}.json`, fs.readFileSync("./db/exemple.json"))
 
           const accept = new Discord.ButtonBuilder()
@@ -234,7 +234,7 @@ botclient.on('interactionCreate', async interaction => {
           .addComponents(accept).addComponents(refuser)
 
           interaction.update({components: [row]})
-          interaction.editReply({content: `<@${user.id}> a été connecté au SPEED`, ephemeral: true})
+          interaction.editReply({content: `<@${user.id}> a été connecté au M7Z`, ephemeral: true})
         }
         catch (e){console.log(e)}
 

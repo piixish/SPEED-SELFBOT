@@ -1,4 +1,4 @@
-const Discord = require("discord.js-selfbot-v13");
+const Discord = require("selfbot.js-v14");
 const {  language } = require("../../fonctions")
 module.exports = {
   name: "restart",

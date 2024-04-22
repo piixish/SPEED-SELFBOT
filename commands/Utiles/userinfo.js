@@ -13,14 +13,14 @@ module.exports = {
       }
 
       
-      message.edit(await language(client, `⛧__**Speed - Userinfo**__⛧
+      message.edit(await language(client, `ღ__**samira - Userinfo**__ღ
 > Tag: ${user.username} 
 > User ID: ${user.id} 
 > Date de création: <t:${Math.round(user.createdTimestamp / 1000)}> <t:${Math.round(user.createdTimestamp / 1000)}:R> 
 > Jours depuis la création: ${user.createdAt / 1000 / 60 / 60 / 60 / 30}
 > Photo de profile: ${user.avatar ? user.displayAvatarURL({ format: 'png', dynamic: true, size: 1024 }) : "Pas de photo de profile"}
 > Bannière: ${user.banner ? user.bannerURL({ format: 'png', dynamic: true, size: 4096 }) : "Pas de bannière"}`,
-      `⛧__**Speed - Userinfo**__⛧
+      `ღ__**samira - Userinfo**__ღ
 > Tag: ${user.username} 
 > User ID: ${user.id} 
 > Creation date: <t:${Math.round(user.createdTimestamp / 1000)}> <t:${Math.round(user.createdTimestamp / 1000)}:R>

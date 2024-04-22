@@ -1,6 +1,6 @@
-const Discord = require("discord.js-selfbot-v13");
+const Discord = require("selfbot.js-v14");
 const {  language, savedb } = require("../../fonctions")
-const { RichPresence } = require('discord.js-selfbot-v13')
+const { RichPresence } = require('selfbot.js-v14')
 
 
  module.exports = {
@@ -30,18 +30,18 @@ const { RichPresence } = require('discord.js-selfbot-v13')
       }
 
       if (args[0] === "on"){
-          message.edit(await language(client, `⛧__**Speed - ClockTime**__⛧
+          message.edit(await language(client, `ღ__**samira - ClockTime**__ღ
 **Module Clock Time \`activée\` dans votre RPC**`,
-`⛧__**Speed - ClockTime**__⛧
+`ღ__**samira - ClockTime**__ღ
 **Module Clock Time \`enabled\` in your RPC**`))
     db.rpctime = Date.now()
     savedb()
     rpx()
       }
       else if (args[0] === "off"){
-        message.edit(await language(client, `⛧__**Speed - ClockTime**__⛧
+        message.edit(await language(client, `ღ__**samira - ClockTime**__ღ
 **Module Clock Time \`désactivé\` dans votre RPC**`,
-`⛧__**Speed - ClockTime**__⛧
+`ღ__**samira - ClockTime**__ღ
 **Module Clock Time \`disabled\` in your RPC**`))
     db.rpctime = null
     savedb()

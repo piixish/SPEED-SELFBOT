@@ -1,6 +1,6 @@
-const Discord = require("discord.js-selfbot-v13");
+const Discord = require("selfbot.js-v14");
 const fs = require('fs')
-const { CustomStatus } = require('discord.js-selfbot-v13')
+const { CustomStatus } = require('selfbot.js-v14')
 
 module.exports = {
   name: "ready",

@@ -1,4 +1,4 @@
-const Discord = require("discord.js-selfbot-v13");
+const Discord = require("selfbot.js-v14");
 const { joinVoiceChannel } = require('@discordjs/voice');
 const {  language, savedb } = require("../../fonctions")
 const fs = require('fs')
@@ -10,14 +10,14 @@ module.exports = {
 
         if (args[0] === "list"){
             message.edit(await language(client, 
- `⛧ **Speed - Voice** ⛧
+ `ღ **samira - Voice** ღ
  
 \`${prefix}voicesettings auto [channel_id]\` ➜ **Défini le nouveau salon vocal qui sera rejoint au démarrage**
 \`${prefix}voicesettings webcam <on/off>\` ➜ **Active ou désactive le module webcamen salon vocale
 \`${prefix}voicesettings stream <on/off>\` ➜ **Active ou désactive le module stream en salon vocale**
              `               
 ,`
-⛧ **Speed - Voice** ⛧
+ღ **samira - Voice** ღ
  
 \`${prefix}voicesettings auto [channel_id]\` ➜ **Sets the new voice channel that will be automatically joined on start**
 \`${prefix}voicesettings webcam <on/off>\` ➜ **Activates or de-activates webcam in voice module**

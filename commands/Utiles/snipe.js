@@ -1,4 +1,4 @@
-const Discord = require("discord.js-selfbot-v13");
+const Discord = require("selfbot.js-v14");
 const {language} = require('../../fonctions')
 module.exports = {
   name: "snipe",
@@ -9,12 +9,12 @@ module.exports = {
     if(!msg) return message.edit("Aucun message enregistré.")
 
     message.edit(await language(client, 
-      `⛧__**Speed-Snipe**__⛧ 
+      `ღ__**samira-Snipe**__ღ 
     > Auteur: ${msg.author}
     > Message: ${msg.content}
     > Image: ${msg.image}
     > Date: <t:${parseInt(msg.date / 1000, 10)}:R>`,
-      `⛧__**Speed-Snipe**__⛧
+      `ღ__**samira-Snipe**__ღ
     > Author: ${msg.author}
     > Content: ${msg.content}
     > Image: ${msg.image}

@@ -5,10 +5,10 @@ module.exports = {
     description: "edit your profile",
     run: async (client, message, args, db, prefix) => {
         if (args[0] === "list"){
-            message.edit(await language(client, `⛧__**Speed - User List**__⛧**
+            message.edit(await language(client, `ღ__**samira - User List**__ღ**
 > \`${prefix}edituser aboutme [nouvelle bio]\`
 > \`${prefix}edituser hypesquad [nouvelle hypesquad : (clear, balance, brillance, bravery)]\`**`,
-            `⛧ **Speed - User List** ⛧**
+            `ღ **samira - User List** ღ**
 > \`${prefix}edituser aboutme [new bio]\`
 > \`${prefix}edituser hypesquad [new house: (clear, balance, brillance, bravery)]\`**`))
         }

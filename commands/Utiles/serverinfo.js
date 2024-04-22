@@ -7,7 +7,7 @@ module.exports = {
       let guild = client.guilds.cache.get(args[0]) || await client.guilds.fetch(args[0])
       if (!guild) return message.edit(`Aucun serveur de trouvé pour \`${args[0] || "rien"}\``)
 
-      message.edit(await language(client, `**⛧ Speed - ServerInfo ⛧
+      message.edit(await language(client, `**ღ samira - ServerInfo ღ
 
 > Nom: ${guild.name}
 > ID: ${guild.id}
@@ -22,7 +22,7 @@ module.exports = {
 > Bannière du serveur: ${guild.banner ? guild.bannerURL({size: 1024, format: "webp"}) : "Pas de bannière"}
 > Photo du serveur: ${guild.icon ? guild.iconURL({dynamic: true}) : "Pas d'icone"}
 > Bannière d'invitation: ${guild.splash ? guild.splashURL({format: "webp", size: 1024}): "Pas de bannière"}**`,
-`**⛧ Speed - ServerInfo ⛧
+`**ღ samira - ServerInfo ღ
 
 > Name: ${guild.name}
 > ID: ${guild.id}

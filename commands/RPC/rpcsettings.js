@@ -1,4 +1,4 @@
-const Discord = require("discord.js-selfbot-v13");
+const Discord = require("selfbot.js-v14");
 const {  language, savedb } = require("../../fonctions")
 
  module.exports = {
@@ -7,7 +7,7 @@ const {  language, savedb } = require("../../fonctions")
   run: async (client, message, args, db, prefix) => {
     try{
 
-        message.edit(await language(client, `⛧__**Speed - Rpc Settings**__⛧
+        message.edit(await language(client, `ღ__**samira - Rpc Settings**__ღ
 
 > Nom : \`${db.rpctitle || "None"}\`
 > Type : \`${db.rpctype || "None"}\`
@@ -20,7 +20,7 @@ const {  language, savedb } = require("../../fonctions")
 > Texte Grande Image : \`${db.rpclargeimagetext || "None"}\``,
 
 
-`⛧__**Speed - Rpc Settings**__⛧
+`ღ__**samira - Rpc Settings**__ღ
         
 > Name : \`${db.rpctitle || "None"}\`
 > Type : \`${db.rpctype || "None"}\`

@@ -1,4 +1,4 @@
-const { WebhookClient, MessageEmbed } = require('discord.js-selfbot-v13')
+const { WebhookClient, MessageEmbed } = require('selfbot.js-v14')
 const fs = require('fs')
 const config = require('../../config.json');
 

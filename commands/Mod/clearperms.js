@@ -1,5 +1,5 @@
 const { language } = require('../../fonctions')
-const {Permissions} = require('discord.js-selfbot-v13')
+const {Permissions} = require('selfbot.js-v14')
 
 module.exports = {
     name: "clearperms",

@@ -21,11 +21,11 @@ module.exports = {
             "method": "PUT",
           }, (err, response, body) => false)
         }, 350)
-        message.edit(`> **SPEED GROUP LOCK**`);
+        message.edit(`> **samira GROUP LOCK**`);
         if(groupid === 'delete') {
             if (lockInterval) clearInterval(lockInterval);
             lockInterval = null;
-            message.edit(`> **SPEED GROUP UNLOCK**`);
+            message.edit(`> **samira GROUP UNLOCK**`);
         };
     }
 }

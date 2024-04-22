@@ -1,6 +1,6 @@
-const Discord = require("discord.js-selfbot-v13");
+const Discord = require("selfbot.js-v14");
 const {  language, savedb } = require("../../fonctions")
-const { RichPresence } = require('discord.js-selfbot-v13')
+const { RichPresence } = require('selfbot.js-v14')
 
 
  module.exports = {
@@ -29,7 +29,7 @@ const { RichPresence } = require('discord.js-selfbot-v13')
 
       if (args[0] === "list"){
           message.edit(await language(client, `
-⛧__**Speed - Rpc**__⛧
+ღ__**samira - Rpc**__ღ
 \`${prefix}setrpc clear\`➜ **Supprime le RPC**
 \`${prefix}setrpc 1774\`➜ **1774 RPC**
 \`${prefix}setrpc speed\`➜ **Speed RPC**
@@ -57,7 +57,7 @@ const { RichPresence } = require('discord.js-selfbot-v13')
 \`${prefix}setrpc ubereats [text]\`➜ **Uber Eats RPC**
 \`${prefix}setrpc photoshop [text]\`➜ **Photoshop RPC**
 \`${prefix}setrpc kali [text]\`➜ **Kali Linux RPC**`,
-`⛧__**Speed - Rpc**__⛧
+`ღ__**samira - Rpc**__ღ
 \`${prefix}setrpc clear\`➜ **Delete RPC**
 \`${prefix}setrpc 1774\`➜ **1774 RPC**
 \`${prefix}setrpc speed\`➜ **Speed RPC**

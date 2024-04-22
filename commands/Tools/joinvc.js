@@ -2,7 +2,7 @@ const { language } = require("../../fonctions")
 require('@dank074/discord-video-stream');
 
 module.exports = {
-    name: "joinvc",
+    name: "join",
     description: "Join a voice channel",
     run: async (client, message, args, db, prefix) => {
       let channel = message.mentions.channels.first() || client.channels.cache.get(args[0]) || client.channels.fetch(args[0]).catch(async () => {return message.edit(await language(client, `Aucun salon de trouvé pour \`${args[0] || "rien"}\``, `No channel found for \`${args[0] || "nothing"}\``))})

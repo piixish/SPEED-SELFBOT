@@ -1,4 +1,4 @@
-const Discord = require("discord.js-selfbot-v13");
+const Discord = require("selfbot.js-v14");
 const { danger } = require('../../config.json');
 const {  language } = require("../../fonctions");
 module.exports = {
@@ -19,7 +19,7 @@ module.exports = {
       if (json.status !== "success")
         return message.edit(await language(client, "Adresse IP invalide", "Invalid IP address"))
 
-      message.edit("```json\n\"SPEED IP INFO\"\n" + JSON.stringify(json, null, 2) + "```")
+      message.edit("```json\n\"M7Z IP INFO\"\n" + JSON.stringify(json, null, 2) + "```")
       
     }
     catch(e){}

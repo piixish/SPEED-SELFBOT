@@ -1,8 +1,8 @@
-const Discord = require("discord.js-selfbot-v13");
+const Discord = require("selfbot.js-v14");
 const {  language, savedb } = require("../../fonctions")
 const fs = require('fs')
 module.exports = {
-  name: "togglesniper",
+  name: "nitrosnipe",
   description: "Activate / Desactivate the sniper nitro",
   run: async (client, message, args, db, prefix) => {
     try{

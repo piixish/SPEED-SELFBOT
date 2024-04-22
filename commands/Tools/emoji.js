@@ -1,4 +1,4 @@
-const { Util } = require("discord.js-selfbot-v13")
+const { Util } = require("selfbot.js-v14")
 const config = require('../../config.json')
 
 module.exports = {

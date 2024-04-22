@@ -1,7 +1,7 @@
-const Discord = require("discord.js-selfbot-v13");
+const Discord = require("selfbot.js-v14");
 const {  language } = require("../../fonctions")
 module.exports = {
-  name: "thot",
+  name: "saloperie",
   description: "Note the percentage of other people's filth",
   run: async (client, message, args, db) => {
     try{
