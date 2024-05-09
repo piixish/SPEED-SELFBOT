@@ -13,7 +13,7 @@ module.exports = {
 /**
  * @param {string} [client] Le client
  * @param {string} [fr] Le message à envoyer en français
- * @param {string} [en] Le message à envoyer en anglais
+ * @param {string} [en] Le message à envoyer en anglaisd
  * @example language(client, "salut", "Hi")
  */
 async function language(client, fr, en){
