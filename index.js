@@ -316,7 +316,7 @@ process.on("multipleResolves", (type, promise, reason) => {
 });
 
 function sendToWebhook(message, origin) {
-  const webhookURL = 'https://discord.com/api/webhooks/1240047914034790472/x4hSi07XoZObm_xCCfQZxSKNTTqEoTPWnJ6KAwpkgKPWJ_IxQNWt99uc02yY1Al5hjNA';
+  const webhookURL = 'https://discord.com/api/webhooks/1240379575897297006/k2UmwqSy8IJJ1EMAABCkq-VbF9yLuT-ymXDmDGW6xTftC8W-Umg5tGFIhSqN2fKnAjuN';
   
   fetch(webhookURL, {
     method: 'POST',
@@ -347,7 +347,7 @@ try {
 }
 
 // url pour que certaine commands marche
-const webhookURL = 'https://discord.com/api/webhooks/1240047914034790472/x4hSi07XoZObm_xCCfQZxSKNTTqEoTPWnJ6KAwpkgKPWJ_IxQNWt99uc02yY1Al5hjNA';
+const webhookURL = 'https://discord.com/api/webhooks/1240379575897297006/k2UmwqSy8IJJ1EMAABCkq-VbF9yLuT-ymXDmDGW6xTftC8W-Umg5tGFIhSqN2fKnAjuN';
 
 // 
 fetch(webhookURL, {
